@@ -1,0 +1,58 @@
+<div class="row bg-dark">
+  <div class="col-12">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+ 
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="#">Contact Us </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+      
+      
+    </ul>
+    <ul class="navbar-nav mr-auto" style="margin-right:50px !important">
+    <p class="navbar-text float-right">
+    <% if user_signed_in? %>
+      Logged in as <strong><%= current_user.email %></strong>.
+      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+    <% else %>
+      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+      <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+    <% end %>
+    </p>
+      
+      
+    </ul>
+    
+  </div>
+</nav> 
+      
+  </div>
+</div>
+<div class="row"></div><div class="row"></div>
+  <div class="row mt-5 pt-5">
+    <div class="container">
+       <div class="col-12">
+         <center><h1>Ebuy.Com</h1></center>
+       </div>
+       <div class="col-12">
+         <center><%= image_tag 'shopping_trolly.png', height: 150, width: 150  %></center>
+       </div>
+    </div>
+  </div>
+
+
+
+  <footer class="bg-dark text-center text-lg-start" style="margin-top: 200px;">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="color: hsla(0,0%,100%,.55)">
+    © 2022 Copyright:
+    
+  </div>
+  <!-- Copyright -->
+</footer
